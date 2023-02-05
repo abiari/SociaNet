@@ -4,11 +4,11 @@
     "es2021": true
   },
   "extends": [
+    "plugin:prettier/recommended",
+    "prettier",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:import/typescript",
-    "plugin:prettier/recommended",
-    "prettier"
+    "plugin:import/typescript"
   ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
@@ -28,12 +28,6 @@
         "caughtErrorsIgnorePattern": "^_"
       }
     ],
-    "prettier/prettier": [
-      "warn",
-      {
-        "endOfLine": "auto",
-        "singleQuote": true
-      }
-    ]
+    "prettier/prettier": "error"
   }
 }
