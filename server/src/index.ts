@@ -6,6 +6,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import path from 'path';
 import authRoutes from './routes/auth.js';
+import userRoutes from './routes/users.js';
 import { fileURLToPath } from 'url';
 import { register } from './controllers/auth.js';
 import { config } from './config/config.js';
@@ -82,6 +83,7 @@ const StartServer = () => {
 
   /* ROUTES */
   app.use('/auth', authRoutes);
+  app.use('/users', userRoutes);
 
   /* HealthCheck */
   app.get('/ping', (req, res) => {
